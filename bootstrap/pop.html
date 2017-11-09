@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <style>
+        #view {
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body style="margin: 50px">
+
+<!--<div id="view">-->
+<!--<button class="btn btn-danger btn-lg" data-toggle="popover" title="title" data-content="上海交通大学继续教育学院开设课程 上海交通大学继续教育学院历年分数上海交通大学继续教育学院教学模式 上海交通大学继续教育学院学校地-->
+<!--址上海交通大学继续教育学院网络教育 上海交通大学继续教育学院其他 上海交通大学继续教育学院院长介绍 上海交通大学继续教育学院学校文化-->
+<!--上海交通大学继续教育学院学校领导 上海交通大学继续教育学院校史沿革海交通大学继续教育学院重要荣誉 上海交通大学继续教育学院办学宗旨-->
+<!--上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学院概况 上海交通大学继续教育学院专业层次">click pop-->
+<!--</button>-->
+<!--</div>-->
+
+<!--<div class="alert alert-warning fade in ">hello-->
+    <!--<button class="close" type="button" data-dismiss="alert">-->
+        <!--<span>&times;</span>-->
+    <!--</button>-->
+<!--</div>-->
+<div class="alert alert-warning fade in " id="alert">hello
+    <button class="close" type="button">
+        <span>&times;</span>
+    </button>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+//    $('button').popover({
+//        viewport: '#view'
+//    });
+
+    $('.close').on('click',function () {
+        $('#alert').alert('close');
+    });
+    $('#alert').on('close.bs.alert',function () {
+        alert('close');
+
+    })
+</script>
+</body>
+</html>

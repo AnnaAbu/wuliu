@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<body style="margin: 200px">
+
+<!--<ul id="nav" class="nav nav-tabs">-->
+<!--<li class="active"><a href="#html5" data-toggle="tab">html5</a></li>-->
+<!--<li><a href="#bootstrap" data-toggle="tab">bootstrap</a></li>-->
+<!--<li><a href="#jquery" data-toggle="tab">jquery</a></li>-->
+<!--<li><a href="#extjs" data-toggle="tab">extjs</a></li>-->
+<!--</ul>-->
+<ul id="nav" class="nav nav-tabs">
+    <li class="active"><a href="#html5">html5</a></li>
+    <li><a href="#bootstrap">bootstrap</a></li>
+    <li><a href="#jquery">jquery</a></li>
+    <li><a href="#extjs">extjs</a></li>
+</ul>
+
+<div class="tab-content" style="padding: 10px;" id="con">
+    <div class="tab-pane fade in active" id="html5">
+        截至2015年12月，该校在职教职工2961人，其中专任教师1823人（具有副高级及以上专业技术职务的1318人，具有硕士及以上学历的1728人）
+        。学校有中国科学院院士4名，中国工程院院士8名（含双聘），国家级教学名师5人，国务院学位委员会学科评议组成员6人，“973”首席科学家4人
+        ，国家“千人计划”入选者9人，国家“万人计划”入选者3人，在聘“长江学者”特聘教授和讲座教授8人，百千万人才工程国家级人选11人，国家杰出
+        青年基金获得者9人，优秀青年基金获得者11人，新世纪优秀人才支持计划69人，享受政府特殊津贴专家162人。
+    </div>
+    <div class="tab-pane fade" id="bootstrap">
+        2003年9月，“北方交通大学”恢复使用1923年老校名“北京交通大学”，重新启用当时的“知行”老校训，旨在传承百年老校优良的治
+        学传统，弘扬交大立校精神，砥砺学子们创造优秀的学术品格，把严谨治学、求实创新、知行统一、注重实践的文化传统发扬光大。
+        为了对“知行”校训有一个全面了解，学校立“知行”校训石碑以示后人，并作碑文诠释“知行”校训，全文如下：
+    </div>
+    <div class="tab-pane fade" id="jquery">上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学院概况 上海交通大学继续教育学院专业层次
+        上海交通大学继续教育学院开设课程 上海交通大学继续教育学院历年分数上海交通大学继续教育学院教学模式 上海交通大学继续教育学院学校地
+        址上海交通大学继续教育学院网络教育 上海交通大学继续教育学院其他 上海交通大学继续教育学院院长介绍 上海交通大学继续教育学院学校文化
+        上海交通大学继续教育学院学校领导 上海交通大学继续教育学院校史沿革海交通大学继续教育学院重要荣誉 上海交通大学继续教育学院办学宗旨
+        上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学院概况 上海交通大学继续教育学院专业层次
+    </div>
+    <div class="tab-pane fade" id="extjs">
+        2005年以来，学院的教学科研工作取得重要突破，“多校合作、面向西部，创建基于天地网的新型教育资源共享体系”项目获得国家级教学成果奖一
+        等奖（排名第一），“天地网远程教育关键技术、系列产品及应用”获得国家科技进步奖二等奖（排名第二），“现代远程教育支撑平台研究及示
+        范应用”获得上海市科技进步奖一等奖（排名第一）。学院立足上海、辐射江浙、面向西部，构建了比较完善的技术支撑平台和现代远程教育体
+        系；2010年被美国自然基金会评价为世界最好的
+    </div>
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript">
+    $('#nav a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+//    $('#nav a').on('show.bs.tab', function () {
+//        alert('before show');
+//    });
+
+</script>
+
+</body>
+</html>

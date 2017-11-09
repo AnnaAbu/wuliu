@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<body style="margin: 50px">
+<nav id="nav1" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web develpment</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#h">1</a></li>
+        <li><a href="#j">2</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown">js
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#w">1</a></li>
+                <li><a href="#d">2</a></li>
+                <li><a href="#g">3</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<nav id="nav2" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web develpment</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#h">1</a></li>
+        <li><a href="#j">2</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown">js
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#w">1</a></li>
+                <li><a href="#d">2</a></li>
+                <li><a href="#g">3</a></li>
+            </ul>
+
+
+        </li>
+    </ul>
+</nav>
+<!--data-spy="scroll" data-target="#nav1"-->
+<div id="content" style="padding: 0 10px; height: 200px;overflow: auto;position: relative;">
+
+    <section class="sec">
+
+        <h4>
+            gggg
+            <a href="#" onclick="removeSec(this)">delete</a>
+        </h4>
+        <p>hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p>
+        <p class="">hhdsdsdsdnjskdisjknjds</p>
+    </section>
+    <section class="sec">
+        <h4 id="h">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+        <p class="">hhdsdsdsdnjskdisjknjds</p>
+    </section>
+
+
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+    <h4 id="j">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+    <p id="w">hhdsdsdsdnjskdisjknjds</p>
+    <h4>html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+    <h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+    <h4 class="">html5</h4>
+    <p id="d">hhdsdsdsdnjskdisjknjds</p>
+    <h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+    <h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p id="g">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p><h4 class="">html5</h4>
+    <p class="">hhdsdsdsdnjskdisjknjds</p>
+</div>
+
+
+<div class="dropdown" id="dropdown">
+    <button class=" btn btn-primary" data-toggle="dropdown" data-target="#dropdown">drop
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+    </ul>
+</div>
+
+<!--<button class=" btn btn-primary" data-toggle="dropdown" data-target="#dropdown">drop-->
+<!--<span class="caret"></span></button>-->
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">
+    $('#dropdown').on('show.bs.dropdown', function () {
+        alert('show');
+    })
+
+    $('#content').scrollspy({
+        offset: 0,
+        target: '#nav2'
+    })
+    $('#nav2').on('activate.bs.scrollspy', function () {
+//        alert('activate');
+    });
+
+    function removeSec(e) {
+        $(e).parents('.sec').remove();
+        $('#content').scrollspy('refresh');
+    }
+</script>
+</body>
+</html>

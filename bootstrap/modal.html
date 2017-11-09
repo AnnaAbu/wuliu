@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<body style="margin: 50px">
+<div class="modal fade " id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">login</h4>
+
+            </div>
+            <div class="modal-body">
+                <!--<p>-->
+                <!--can regerster-->
+                <!--</p>-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">1</div>
+                        <div class="col-md-4">1</div>
+                        <div class="col-md-4">1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default">register</button>
+                <button class="btn btn-primary">login</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-backdrop="false" data-keyboard="false"-->
+<!--data-show="false" href="modal-test.html">click-->
+<!--</button>-->
+
+<button class="btn btn-primary" id="btn">click next</button>
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript">
+
+    //    $('#btn').on('click',function () {
+    ////        $('#myModal').modal('show');
+    //        alert("ff")
+    //    })
+    $('#btn').on('click', function () {
+        $('#myModal').modal('show');
+    });
+    $('#myModal').modal({
+        show: false,
+        remote:'modal-test.html'
+    });
+    $('#myModal').on('show.bs.modal',function () {
+        alert('show');
+    });
+    $('#myModal').on('shown.bs.modal',function () {
+        alert('shown');
+    });
+    $('#myModal').on('hide.bs.modal',function () {
+        alert('hide');
+    });
+    $('#myModal').on('hidden.bs.modal',function () {
+        alert('hidden');
+    })
+
+
+
+
+</script>
+
+
+</body>
+</html>

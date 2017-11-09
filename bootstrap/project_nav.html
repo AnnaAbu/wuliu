@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        color: #666;
+    }
+
+    #myCarousel {
+        margin: 50px 0 0 0;
+    }
+
+    #navbar-collapse {
+        margin-top: 0;
+    }
+
+    #navbar-collapse ul {
+        margin-top: 0;
+    }
+
+    .carousel-inner img {
+        margin: 0 auto;
+    }
+
+    .tab-h2 {
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #0059b2;
+    }
+
+    .tab-p {
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #999;
+    }
+
+    .tab1 {
+        margin: 30px;
+        color: #666;
+    }
+
+    .tab1 .col {
+        padding: 20px;
+    }
+
+    #footer {
+        background-color: #ccc;
+        border-top: 1px solid;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .tab2 {
+        background-color: #eee;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .tab2 img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .tab3 {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .tab3 img {
+        width: 65%;
+        height: 65%;
+    }
+
+    .text h3 {
+        font-size: 20px;
+
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        .text h3 {
+            font-size: 22px;
+        }
+
+        .text p {
+            font-size: 15px;
+        }
+        .tab2-text{
+            float: left;
+        }
+        .tab2-img{
+            float: right;
+        }
+
+    }
+
+    @media (min-width: 922px) {
+        .text h3 {
+            font-size: 24px;
+        }
+
+        .text p {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .text h3 {
+            font-size: 26px;
+        }
+
+        .text p {
+            font-size: 18px;
+        }
+    }
+
+
+    /*.carousel-control {*/
+    /*font-size: 100px;*/
+    /*}*/
+</style>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" style="padding: 0px;"><img src="img/logo.png" alt=""></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>首页</a></li>
+                <li><a href="project_infomation.html"><span class="glyphicon glyphicon-list"></span>咨讯</a></li>
+                <li><a href="project_case.html"><span class="glyphicon glyphicon-fire"></span>案例</a></li>
+                <li><a href="project_about.html"><span class="glyphicon glyphicon-question-sign"></span>关于</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" class=" active" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active"><img src="img/img4.jpg" alt="first"></div>
+        <div class="item"><img src="img/img5.jpg" alt="second"></div>
+        <div class="item"><img src="img/img4.jpg" alt="third"></div>
+    </div>
+    <a href="#myCarousel" data-slide="prev" class="carousel-control left"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control right"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<div class="tab1">
+    <div class="container">
+        <h2 class="tab-h2">
+            [hello world]
+            <p class="tab-p">
+                because ...
+            </p>
+        </h2>
+        <div class="row">
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="img/img3.jpg" alt="img3"></a>
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">cotent</div>
+                        <p class="text-muted">fffffffsv9ohinjkb fsjknreiojvfkls joiklrebmvf </p>
+                        <p>fgbh9uivknjw,sd cxhiuknjmrbef lkmbef vdoijkl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="img/img3.jpg" alt="img3"></a>
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">cotent</div>
+                        <p class="text-muted">fffffffsv9ohinjkb fsjknreiojvfkls joiklrebmvf </p>
+                        <p>fgbh9uivknjw,sd cxhiuknjmrbef lkmbef vdoijkl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="img/img3.jpg" alt="img3"></a>
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">cotent</div>
+                        <p class="text-muted">fffffffsv9ohinjkb fsjknreiojvfkls joiklrebmvf </p>
+                        <p>fgbh9uivknjw,sd cxhiuknjmrbef lkmbef vdoijkl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="img/img3.jpg" alt="img3"></a>
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">cotent</div>
+                        <p class="text-muted">fffffffsv9ohinjkb fsjknreiojvfkls joiklrebmvf </p>
+                        <p>fgbh9uivknjw,sd cxhiuknjmrbef lkmbef vdoijkl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 tab2-img">
+                <img src="img/img1.jpg" alt="" class="auto img-responsive center-block">
+            </div>
+            <div class="col-md-6 col-sm-6 text tab2-text">
+                <h3>强大的学习体系</h3>
+                <p>强大的学习体系，你好你是谁</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6  ">
+                <img src="img/img2.jpg" alt="" class="auto img-responsive center-block">
+            </div>
+            <div class="col-md-6 col-sm-6 text">
+                <h3>强大的学习体系</h3>
+                <p>强大的学习体系，你好你是谁</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container">
+        <p>企业培训|合作事宜|版权诉讼</p>
+        <p>企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼</p>
+    </div>
+</footer>
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+    $('.carousel-control').css('line-height', $('.carousel-inner img'.height + 'px'));
+    $('#myCarousel').carousel({
+        interval: 4000
+    });
+    //    $(window).resize(function () {
+    //
+    //        var $height = $('.carousel-inner  img').eq(0).height() ||
+    //            $('.carousel-inner  img').eq(1).height() ||
+    //            $('.carousel-inner  img').eq(2).height();
+    //        $('.carousel-control').css('line-height', $height + 'px')
+    //        console.log($height)
+    //    })
+
+
+//
+//    alert($('.auto').eq(0).height());
+//    alert($('.auto').eq(1).height());
+//    $offset=($('.auto').eq(0).height()-$('.text').eq(0).height())/2+'px';
+    $(window).load(function () {
+        $('.text').eq(0).css('margin-top',(($('.auto').eq(0).height()-$('.text').eq(0).height())/2+'px'));
+    });
+//    $('.text').eq(0).css('margin-top',(($('.auto').eq(0).height()-$('.text').eq(0).height())/2+'px'));
+    $(window).resize(function () {
+        $('.text').eq(0).css('margin-top',(($('.auto').eq(0).height()-$('.text').eq(0).height())/2+'px'));
+    });
+
+
+//    alert(($('.auto').eq(0).height()-$('.text').eq(0).height())/2+'px')
+
+    $('.text').eq(1).css('margin-top',(($('.auto').eq(1).height()-$('.text').eq(1).height())/2+'px'));
+    $(window).resize(function () {
+        $('.text').eq(1).css('margin-top',(($('.auto').eq(1).height()-$('.text').eq(1).height())/2+'px'));
+    });
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <style>
+        .info-left {
+            background-color: #fff;
+        }
+
+        .info-left blockquote {
+            margin: 0;
+
+        }
+
+        .info-left h2 {
+            font-size: 20px;
+            color: #333333;
+            padding: 5px;
+        }
+
+        .info-left h4 {
+            color: #666;
+            font-size: 16px;
+            padding: 4px 0 0 0;
+        }
+
+        .news-content h3 {
+            text-align: center;
+        }
+        #footer {
+            background-color: #ccc;
+            border-top: 1px solid;
+            padding: 20px;
+
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header" style="background-color: #0053b2; padding-bottom: 2%;padding-top: 2%;padding-left: 10%;">
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="./img/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 20px">
+    <div class="row">
+        <div class="col-md-3 info-left  hidden-xs hidden-sm">
+            <blockquote>
+                <h2>联系我们</h2>
+            </blockquote>
+            <br>
+
+            <div class="row center-block">
+                <img src="img/img2.jpg" alt="" class="img-responsive">
+            </div>
+
+            <h4>地址：北京交通大学</h4>
+            <h4>电话：6158110</h4>
+            <h4>邮编：10044</h4>
+            <h4>传真：010-119</h4>
+        </div>
+        <div class="col-md-9 news-content">
+        </div>
+    </div>
+</div>
+
+
+
+<footer id="footer">
+    <div class="container">
+        <p>企业培训|合作事宜|版权诉讼</p>
+        <p>企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼</p>
+    </div>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+    $(document).ready(function () {
+        var news_id = $.getUrlParam('id');
+        var url = "http://39.106.45.205:8003/detail";
+        $.get(url, {"id": news_id},
+            function (data) {
+                var status = data.status;
+                var data_detail = data.data;
+                var title = $("<h3></h3>").text(data_detail.title);
+                var content = $("<p></p>").text(data_detail.content).css("font-size", "18px");
+                $('.news-content').append(title);
+                $('.news-content').append(content);
+
+            }, "json");
+    });
+
+
+</script>
+</body>
+</html>

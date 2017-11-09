@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <style>
+
+        @media (min-width: 980px) {
+            .carousel {
+                height: 450px;
+            }
+
+            .carousel .item {
+                height: 450px;
+            }
+
+            .carousel-inner > .item > img {
+                height: 450px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            .carousel {
+                height: 400px;
+            }
+
+            .carousel .item {
+                height: 400px;
+            }
+
+            .carousel-inner > .item > img {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .carousel {
+                height: 340px;
+            }
+
+            .carousel .item {
+                height: 340px;
+            }
+
+            .carousel-inner > .item > img {
+                height: 340px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel {
+                height: 250px;
+            }
+
+            .carousel .item {
+                height: 250px;
+            }
+
+            .carousel-inner > .item > img {
+                height: 250px;
+            }
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel .item {
+            background-color: #777;
+        }
+
+        .carousel-inner > .item > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+        }
+
+        /*.carousel {*/
+        /*height: 500px;*/
+        /*}*/
+
+        /*!* Since positioning the image, we need to help out the caption *!*/
+        /*.carousel-caption {*/
+        /*z-index: 10;*/
+        /*}*/
+
+        /*!* Declare heights because of positioning of img element *!*/
+        /*.carousel .item {*/
+        /*height: 500px;*/
+        /*background-color: #777;*/
+        /*}*/
+
+        /*.carousel-inner > .item > img {*/
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: 0;*/
+        /*min-width: 100%;*/
+        /*height: 500px;*/
+        /*}*/
+
+        .mynav {
+            margin-bottom: 0px;
+            width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .mynav .myli {
+            width: 33.3%;
+            display: inline-block;
+        }
+
+        .myimg {
+            width: 100%;
+            height: 300px;
+        }
+
+        .myli {
+            font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: keep-all;
+            white-space: nowrap;
+            color: #000;
+        }
+
+        .mya:hover, .mya:visited, .mya:link {
+            text-decoration: none;
+        }
+
+        .mya {
+            color: black;
+        }
+
+        .mya:hover {
+            color: mediumseagreen;
+            text-decoration: none;
+        }
+
+        .mya:checked {
+            color: red;
+            text-decoration: none;
+        }
+        #footer {
+            background-color: #ccc;
+            border-top: 1px solid;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+
+<body class="clearfix">
+
+<div class="header" style="background-color: #0053b2; padding-bottom: 2%;padding-top: 2%;padding-left: 10%;">
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="./img/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="first-slide" src="img/bk.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Example headline.</h1>
+                    <p>Note: If youtons on the lety rules.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="second-slide" src="img/img4.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="third-slide" src="img/img3.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>你好！！！</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <!--<nav class="navbar mynav" style="background-color: #e5e7ec;">-->
+    <!--<ul class="nav nav-tabs" style="text-align: center">-->
+    <!--<li class="myli" role="presentation"><a href="#" style="color: #333333;font-size: 18px">信息</a></li>-->
+    <!--<li class="myli" role="presentation"><a href="#" style="color: #333333;font-size: 18px">消息</a></li>-->
+    <!--<li class="myli" role="presentation"><a href="#" style="color: #333333;font-size: 18px">讯息</a></li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+</div>
+
+<!--<div class="btn-group btn-group-justified nav-tabs" style="background-color: #e5e7ec;">-->
+<!--<a class="btn btn-default btn-lg " href="#html5">信息</a>-->
+<!--<a class="btn btn-default btn-lg" href="#bootstrap">消息</a>-->
+<!--<a class="btn btn-default btn-lg" href="#jquery">讯息</a>-->
+<!--</div>-->
+
+
+<div class="btn-group btn-group-justified nav-tabs" style="background-color: #e5e7ec;">
+    <a href="#html5" class="btn btn-default btn-lg " data-toggle="tab">信息</a>
+    <a href="#bootstrap" class="btn btn-default btn-lg " data-toggle="tab">消息</a>
+    <a href="#jquery" class="btn btn-default btn-lg " data-toggle="tab">讯息</a>
+</div>
+
+<div class="tab-content" style="padding: 10px; height: 500px; overflow: scroll;">
+    <div class="tab-pane fade in active" id="html5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="img/img1.jpg" class="img-responsive myimg" alt="Responsive image">
+                </div>
+                <div class="col-sm-6">
+                    <ul class="list-group">
+                        <a href="#" class="list-group-item myli">经济管理学院物流管理 经济管理学院物流管理 经济管理学院物流管理经济管理学院物流管理 经济管理学院物流管理 </a>
+                        <a href="http://sem.bjtu.edu.cn" target="_blank" class="list-group-item myli active">经济管理学院物流管理 </a>
+                        <a href="#" class="list-group-item myli">经济管理学院物流管理 </a>
+                        <a href="#" class="list-group-item myli">经济管理学院物流管理 </a>
+                        <a href="#" class="list-group-item myli">经济管理学院物流管理 </a>
+                        <a href="#" class="list-group-item myli">经济管理学院物流管理 </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="bootstrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="img/img1.jpg" class="img-responsive myimg" alt="Responsive image">
+                </div>
+                <div class="col-sm-6">
+                    上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学
+                    址上海交通大学继续教育学院网络教育 上海交通大学继续教育学院其他 上海交通大学继续教育学院院长介绍 上海交通大学继续教育学院学校文化
+                    上海交通大学继续教育学院学校领导 上海交通大学继续教育学院校史沿革海交通大学继续教育学院重要荣誉 上海交通大学继续教育学院办学宗旨
+                    上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学院概况 上海交通大学继续教育学院专业层次
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="jquery">上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学
+        址上海交通大学继续教育学院网络教育 上海交通大学继续教育学院其他 上海交通大学继续教育学院院长介绍 上海交通大学继续教育学院学校文化
+        上海交通大学继续教育学院学校领导 上海交通大学继续教育学院校史沿革海交通大学继续教育学院重要荣誉 上海交通大学继续教育学院办学宗旨
+        上海交通大学继续教育学院 上海交大继续教育 上海交大继续教育学院 上海交通大学继续教育学院学院概况 上海交通大学继续教育学院专业层次
+    </div>
+</div>
+
+
+<footer id="footer">
+    <div class="container">
+        <p>企业培训|合作事宜|版权诉讼</p>
+        <p>企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼</p>
+    </div>
+</footer>
+
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-sm-6">-->
+<!--<img src="img/img1.jpg" class="img-responsive myimg" alt="Responsive image">-->
+<!--</div>-->
+<!--<div class="col-sm-6">-->
+<!--<ul class="list-group">-->
+<!--<li class="list-group-item myli"><a class="mya" href="#">经济管理学院物流管理 经济管理学院物流管理 经济管理学院物流管理 经济管理学院物流管理-->
+<!--经济管理学院物流管理 经济管理学院物流管理 </a></li>-->
+<!--<a href="#" class="list-group-item myli active">经济管理学院物流管理 </a>-->
+<!--<a href="#" class="list-group-item myli">经济管理学院物流管理 </a>-->
+<!--<a href="#" class="list-group-item myli">经济管理学院物流管理 </a>-->
+<!--<a href="#" class="list-group-item myli">经济管理学院物流管理 </a>-->
+<!--<a href="#" class="list-group-item myli">经济管理学院物流管理 </a>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+<style>
+
+    body {
+        color: #666;
+    }
+
+    #myCarousel {
+        margin: 50px 0 0 0;
+    }
+
+    #navbar-collapse {
+        margin-top: 0;
+    }
+
+    #navbar-collapse ul {
+        margin-top: 0;
+    }
+
+    .carousel-inner img {
+        margin: 0 auto;
+    }
+
+    .tab-h2 {
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #0059b2;
+    }
+
+    .tab-p {
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #999;
+    }
+
+    .tab1 {
+        margin: 30px;
+        color: #666;
+    }
+
+    .tab1 .col {
+        padding: 20px;
+    }
+
+    #information {
+        background-color: #EEEEEE;
+        padding: 40px 0;
+    }
+
+    .info-content {
+        background-color: #fff;
+        margin: 0 0 20px 0;
+        box-shadow: 2px 2px 3px #ccc;
+    }
+
+    .info-content img {
+        margin: 12px 0;
+    }
+
+    .info-content h4 {
+        color: #333;
+        padding: 2px 0 0 0;
+        font-size: 14px;
+    }
+
+    .info-content p {
+        line-height: 1.6;
+    }
+
+    .info-right {
+        background-color: #fff;
+    }
+
+    .info-right blockquote {
+        margin: 0;
+
+    }
+
+    .info-right h2 {
+        font-size: 20px;
+        color: #333333;
+        padding: 5px;
+    }
+
+    .info-right h4 {
+        color: #333;
+        font-size: 16px;
+        padding: 4px 0 0 0;
+    }
+
+    #case {
+        padding: 40px 0px;
+        background-color: #eee;
+        text-align: center;
+    }
+
+    #case h4 {
+        color: #666;
+    }
+
+    #case p {
+        color: #666666;
+        line-height: 1.6;
+    }
+
+    #about {
+        background: #EEEEEE;
+        padding: 40px 15px;
+    }
+
+    #about a {
+        color: #0059b2;
+    }
+
+    #about .about {
+        background-color: #fff;
+        box-shadow: 2px 2px 3px #ccc;
+    }
+    #about h3{
+        color: #333;
+        font-size: 14px;
+        border-bottom: 1px solid #eee;
+        padding: 20px 0px;
+        margin:0 0 10px 0;
+    }
+    #about p{
+        line-height: 2;
+        font-size: 12px;
+
+    }
+
+    #footer {
+        background-color: #666;
+        border-top: 1px solid;
+        padding: 20px;
+        text-align: center;
+        color: #eee;
+    }
+
+    .tab2 {
+        background-color: #eee;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .tab2 img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .tab3 {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .tab3 img {
+        width: 65%;
+        height: 65%;
+    }
+
+    .text h3 {
+        font-size: 20px;
+
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .jumbotron {
+        background-color: #333;
+        margin: 50px 0 0 0;
+        color: #cccccc;
+
+    }
+
+    .jumbotron h1 {
+        font-size: 26px;
+        padding: 0 0 0 20px;
+    }
+
+    .jumbotron h4 {
+        font-size: 15px;
+        padding: 0 0 0 20px;
+    }
+
+    @media (min-width: 768px) {
+        .text h3 {
+            font-size: 22px;
+        }
+
+        .text p {
+            font-size: 15px;
+        }
+
+        .tab2-text {
+            float: left;
+        }
+
+        .tab2-img {
+            float: right;
+        }
+
+        .jumbotron h1 {
+            font-size: 30px;
+            padding: 0 0 0 20px;
+        }
+
+        .jumbotron h4 {
+            font-size: 16px;
+            padding: 0 0 0 20px;
+        }
+
+        .info-content h4 {
+            font-size: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        #about h3{
+            font-size: 19px;
+        }
+        #about p{
+            font-size: 14px;
+
+        }
+
+    }
+
+    @media (min-width: 922px) {
+        .text h3 {
+            font-size: 24px;
+        }
+
+        .text p {
+            font-size: 16px;
+        }
+
+        .jumbotron h1 {
+            font-size: 33px;
+            padding: 0 0 0 20px;
+        }
+
+        .jumbotron h4 {
+            font-size: 17px;
+            padding: 0 0 0 20px;
+        }
+
+        .info-content h4 {
+            font-size: 18px;
+        }
+        #about h3{
+            font-size: 20px;
+        }
+        #about p{
+            font-size: 15px;
+
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .text h3 {
+            font-size: 26px;
+        }
+
+        .text p {
+            font-size: 18px;
+        }
+
+        .jumbotron h1 {
+            font-size: 36px;
+            padding: 0 0 0 20px;
+        }
+
+        .jumbotron h4 {
+            font-size: 18px;
+            padding: 0 0 0 20px;
+        }
+
+        .info-content h4 {
+            font-size: 20px;
+        }
+        #about h3{
+            font-size: 22px;
+        }
+        #about p{
+            font-size: 16px;
+
+        }
+    }
+
+</style>
+<body>
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" style="padding: 0px;"><img src="img/logo.png" alt=""></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" style="margin-top: 0;">
+                <li><a href="project_nav.html">
+                    <span class="glyphicon glyphicon-home"></span>首页</a>
+                </li>
+                <li><a href="project_infomation.html">
+                    <span class="glyphicon glyphicon-list"></span>咨讯</a>
+                </li>
+                <li><a href="project_case.html">
+                    <span class="glyphicon glyphicon-fire"></span>案例</a>
+                </li>
+                <li class="active"><a href="project_about.html">
+                    <span class="glyphicon glyphicon-question-sign"></span>关于</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <hgroup>
+            <h1>资讯</h1>
+            <h4>企业培训最新动态，等等。。。</h4>
+        </hgroup>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-xs hidden-sm">
+                <div class="list-group">
+                    <a class="list-group-item" href="#1">1机构介绍</a>
+                    <a class="list-group-item" href="#2">2加入我们</a>
+                    <a class="list-group-item" href="#3">3联系方式 </a>
+                </div>
+            </div>
+            <div class="col-md-9 about">
+                <a href="" name="1"></a>
+                <h3>机构简介</h3>
+                <p>给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 v 成长</p>
+                <a href="" name="2"></a>
+                <h3>加入我们</h3>
+                <p>给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 给微软后 vs 大家可能发 v出行粉色的 v 成长</p>
+                <a href="" name="2"></a>
+                <h3>联系方式</h3>
+               <p>tel 199100</p>
+                <p>地址 北京交通大学</p>
+                <p>右边 199100</p>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <p>企业培训|合作事宜|版权诉讼</p>
+        <p>企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼企业培训|合作事宜|版权诉讼</p>
+    </div>
+</footer>
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+
+
+</script>
+</body>
+</html>
