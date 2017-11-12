@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <style>
+        #my_tr td a:hover {
+            background-color: #00b3ee;
+        }
+
+        #my_tr td a {
+            text-decoration: none;
+            font-size: 19px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="header" style="background-color: #0053b2; padding-bottom: 2%;padding-top: 2%;padding-left: 10%;">
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="./img/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="news_item_all.html">全部</a></li>
+                <li class="active"><a href="#">本科生</a></li>
+                <li ><a href="news_item_yjs.html" >研究生</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9 news-div">
+            <table class="table news-items" frame="void" border="0" cellspacing="0">
+                <!--<tr style="cursor: hand;" id="my_tr">-->
+                    <!--<td style="border-top: 0;border-left: 0"><a href="" style="color: black"><span style="border-right: 1px solid gray; padding-right: 10px;">本科生</span></a></td>-->
+                    <!--<td style="border-top: 0;border-left: 0;border-bottom: 0"><a href="" style="color: black">关于金融风险管理结课考试时间及地点的通知</a>-->
+                    <!--<td style="border-top: 0;border-left: 0;border-bottom: 0"><a href="#" style="color: black">2017-11-11</a>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div style="width: 1000px;margin-left: 400px">
+
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var url = "http://39.106.45.205:8002/getlist/";
+        var categories = ["bks"];
+        $.ajax({
+            url: url,
+            type: "POST",
+            dataType: "json",
+            data: {"page": "1", "num": "100", "category": categories},
+            success: function (result) {
+                status = result.status;
+                data = result.data;
+                bks = data.bks;
+                $.each(bks, function (n, value) {
+                    console.log(value);
+                    var tr_news = $("<tr></tr>");
+                    var td_category = $("<td></td>").css({
+                        "border-top": "1px dash #ddd",
+                        "border-left": "0",
+                        "border-bottom": "0"
+                    });
+                    var td_title = $("<td></td>").css({
+                        "border-top": "1px dash #ddd",
+                        "border-left": "0",
+                        "border-bottom": "0"
+                    });
+                    var td_timestamp = $("<td></td>").css({
+                        "border-top": "1px dash #ddd",
+                        "border-left": "0",
+                        "border-bottom": "0"
+                    });
+                    var a_category = $("<span></span>").text(value.category).css("color", "black");
+                    var a_title = $("<a href='news_detail.html?id=" + value.id + "'></a>").text(value.title).css("color", "black");
+                    var a_time = $("<span</span>").text(value.timestamp).css("color", "black");
+                    td_category.append(a_category);
+                    td_title.append(a_title);
+                    td_timestamp.append(a_time);
+                    tr_news.append(td_category).append(td_title).append(td_timestamp);
+                    $('.news-div .news-items').append(tr_news);
+                });
+            },
+            error: function (error) {
+                console.log(JSON.stringify(error));
+
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
