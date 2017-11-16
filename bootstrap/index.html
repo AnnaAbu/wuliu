@@ -9,7 +9,6 @@
     <link href=" ../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <style>
-
         @media (min-width: 980px) {
             .carousel {
                 height: 450px;
@@ -66,10 +65,6 @@
             }
         }
 
-        .carousel-caption {
-            z-index: 10;
-        }
-
         .carousel .item {
             background-color: #777;
         }
@@ -80,51 +75,6 @@
             left: 0;
             min-width: 100%;
         }
-
-        .mynav {
-            margin-bottom: 0px;
-            width: 100%;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-
-        .mynav .myli {
-            width: 33.3%;
-            display: inline-block;
-        }
-
-        .myimg {
-            width: 100%;
-            height: 300px;
-        }
-
-        .myli {
-            font-size: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            word-break: keep-all;
-            white-space: nowrap;
-            color: #000;
-        }
-
-        .mya:hover, .mya:visited, .mya:link {
-            text-decoration: none;
-        }
-
-        .mya {
-            color: black;
-        }
-
-        .mya:hover {
-            color: mediumseagreen;
-            text-decoration: none;
-        }
-
-        .mya:checked {
-            color: red;
-            text-decoration: none;
-        }
-
         #footer {
             background-color: #ccc;
             border-top: 1px solid;
@@ -164,46 +114,6 @@
         .text p {
             font-size: 14px;
         }
-
-        @media (min-width: 768px) {
-            .text h3 {
-                font-size: 22px;
-            }
-
-            .text p {
-                font-size: 15px;
-            }
-
-            .tab2-text {
-                float: left;
-            }
-
-            .tab2-img {
-                float: right;
-            }
-
-        }
-
-        @media (min-width: 922px) {
-            .text h3 {
-                font-size: 24px;
-            }
-
-            .text p {
-                font-size: 16px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .text h3 {
-                font-size: 26px;
-            }
-
-            .text p {
-                font-size: 18px;
-            }
-        }
-
         a {
             color: #069;
         }
@@ -299,17 +209,28 @@
 </div>
 
 
-<div class="tab-content" style="padding: 10px;">
-    <div class="pane-content tab-pane active" id="news-pane">
+<div class="tab-content">
+    <div class="pane-content tab-pane active" id="news-pane" style="margin: 20px 0px">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <img src="img/123.jpg" class="img-responsive myimg" alt="Responsive image">
+                <div class="col-sm-4" style="margin: 10px 0px">
+                    <img src="img/123.jpg" class="img-responsive text-center " alt="Responsive image">
                 </div>
-                <div class="col-sm-6">
-                    <ul class="list-group news-detail" style="margin: 10% 10%;font-size: larger;">
+                <div class="col-sm-8">
+                    <ul class="list-group news-detail">
+                        <h3 class="text-center" style="margin: 0px;padding: 0px">物流管理与技术北京市重点实验室</h3>
                         <p style="text-indent: 2em">
-                            学院拥有1个国家二级重点学科（产业经济学）、2个北京市一级重点学科（应用经济学、管理科学与工程）、1个北京市二级重点学科（企业管理）。拥有4个北京市科研平台：2个北京市哲学社会科学研究基地“北京交通发展研究基地”和“北京产业安全与发展研究基地”，1个北京市社会科学与自然科学协同创新研究基地“北京人文交通、科技交通、绿色交通研究基地”，1个北京市重点实验室“物流管理与技术实验室”。</p>
+                            物流管理与技术北京市重点实验室（以下简称“实验室”）于2008年9月经北京市教委批准立项建设，依托北京市重点一级学科“管理科学与工程”，由北京交通大学经济管理学院牵头组建，在软硬件资源投入、师资队伍建设、创新人才培养等方面得到了北京市教委、北京交通大学的大力支持。
+                        </p>
+                        <p style="text-indent: 2em">
+                            根据建设高等教育强国的发展要求，实验室面向国民经济发展重大战略需求，应用学科前沿理论成果与先进物流管理技术，阐明和揭示物流管理活动规律，丰富和发展物流管理理论、方法和工具，着力培养物流管理类创新型、复合型人才，目前已发展成为北京交通大学混合式教学的主场所、经济管理创新型人才培养基地、科教融合的承载体。
+                        </p>
+                        <p style="text-indent: 2em">
+                            实验室位于北京交通大学思源东楼4层，使用面积1000平方米，仪器设备1252台（件），总价值2018万元，承担经济管理各专业的实验教学工作及相关科研活动，每年为12个专业的本科生、研究生（含专业学位）等开设实验课程80门，学生数超过6800人次，实验人时总数超过450万小时。
+                        </p>
+                        <p style="text-indent: 2em">
+                            实验室现有专任教师63人，其中，教授21人；副教授28人；具有博士学位的教师48人。现有中国工程院院士1人；国务院学科评议组成员1人；全国本科教学指导委员会委员4人；入选教育部新世纪优秀人才支持计划4人；特聘长江学者讲座教授1人。
+                        </p>
                     </ul>
                 </div>
             </div>
@@ -322,7 +243,6 @@
                     <table class="table table-hover" frame="void" border="1" cellspacing="0">
                         <thead>
                         <tr>
-
                         </tr>
                         </thead>
                         <tbody>
@@ -332,15 +252,19 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">研究生</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">研究生</a>
                             </td>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
                             </td>
                         </tr>
                         <tr>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">博士生</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">博士生</a>
                             </td>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
                             </td>
                         </tr>
                         </tbody>
@@ -362,15 +286,19 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">研究生</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">研究生</a>
                             </td>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
                             </td>
                         </tr>
                         <tr>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">博士生</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">博士生</a>
                             </td>
-                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href="" style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
+                            <td style="border-top:1px dashed #8699A4;border-left: 0;border-bottom: 0"><a href=""
+                                                                                                         style="color: black">关于金融风险管理结课考试时间及地点的通知</a>
                             </td>
                         </tr>
                         </tbody>
@@ -406,12 +334,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
-                <img  src="img/img2.jpg" id="imgg1" alt="" class="auto img-responsive center-block">
+                <img src="img/img2.jpg" id="imgg1" alt="" class="auto img-responsive center-block">
             </div>
-            <div class="col-md-6 col-sm-6 text" >
+            <div class="col-md-6 col-sm-6 text">
                 <div style="margin: 10px 10px">
-                <h3 style="border-top:0"  class="hp1">强大的学习体系</h3>
-                <p  style="font-size: 14px" class="hpp1" >强大的学习体系，你好你是谁</p>
+                    <h3 style="border-top:0" class="hp1">强大的学习体系</h3>
+                    <p style="font-size: 14px" class="hpp1">强大的学习体系，你好你是谁</p>
                 </div>
             </div>
         </div>
@@ -423,14 +351,14 @@
             <div class="col-md-6 col-sm-6 text">
                 <div style="margin: 10px 10px">
                     <h3 style="border-top:0" class="hp2">强大的学习体系</h3>
-                    <p style="font-size: 14px"class="hpp2">强大的学习体系，你好你是谁</p>
+                    <p style="font-size: 14px" class="hpp2">强大的学习体系，你好你是谁</p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6  ">
                 <img id="imgg2" src="img/img1.jpg" alt="" class="auto img-responsive center-block">
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 
@@ -454,23 +382,22 @@
         $(".pane-content").eq(index).siblings().hide();
     });
 
-        $(document).ready(function () {
-            var url = "http://39.106.45.205:8003/image";
-            $.get(url, {"key": "value"},
-                function (data) {
-                    var status = data.status;
-                    img_url = data.img_url;
-                    $.each(img_url, function (n, value) {
-                        $('#myCarousel .carousel-inner .my-img').eq(n - 1).attr('src', url.substr(0, url.lastIndexOf('/')) + '/' + value);
-                    });
-                }, "json");
-        });
+    $(document).ready(function () {
+        var url = "http://39.106.45.205:8003/image";
+        $.get(url, {"key": "value"},
+            function (data) {
+                var status = data.status;
+                img_url = data.img_url;
+                $.each(img_url, function (n, value) {
+                    $('#myCarousel .carousel-inner .my-img').eq(n - 1).attr('src', url.substr(0, url.lastIndexOf('/')) + '/' + value);
+                });
+            }, "json");
+    });
 
 
     $(document).ready(function () {
         var url = "http://39.106.45.205:8002/getlist/";
         var categories = ["bks", "yjs"];
-
         $.ajax({
             url: url,
             type: "POST",
@@ -478,7 +405,7 @@
             data: {"page": "1", "num": "6", "category": categories},
             success: function (result) {
                 status = result.status;
-              //  alert(JSON.stringify(result));
+                //  alert(JSON.stringify(result));
                 data = result.data;
                 bks = data.bks;
                 yjs = data.yjs;
@@ -538,18 +465,18 @@
                 url: url,
                 type: "POST",
                 dataType: "json",
-                data: { },
+                data: {},
                 success: function (result) {
                     console.log(result);
                     $(".tab2 .hp1").text(result.data[0].title);
                     $(".tab2 .hpp1").text(result.data[0].description);
                     $(".tab3 .hp2").text(result.data[1].title);
                     $(".tab3 .hpp2").text(result.data[1].description);
-                    var url_tempt="http://39.106.45.205:8002/site_media/"+result.data[0].pic_url;
-                    $(".tab2 #imgg1").attr("src",url_tempt);
-                    var url_temp="http://39.106.45.205:8002/site_media/"+result.data[1].pic_url;
-                    $(".tab3 #imgg2").attr("src",url_temp);
-                   console.log(result);
+                    var url_tempt = "http://39.106.45.205:8002/site_media/" + result.data[0].pic_url;
+                    $(".tab2 #imgg1").attr("src", url_tempt);
+                    var url_temp = "http://39.106.45.205:8002/site_media/" + result.data[1].pic_url;
+                    $(".tab3 #imgg2").attr("src", url_temp);
+                    console.log(result);
                 },
                 error: function (error) {
                 }

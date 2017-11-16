@@ -12,15 +12,18 @@
         .info-left {
             background-color: #fff;
         }
+
         .info-left blockquote {
             margin: 0;
 
         }
+
         .info-left h2 {
             font-size: 20px;
             color: #333333;
             padding: 5px;
         }
+
         .info-left h4 {
             color: #666;
             font-size: 16px;
@@ -30,6 +33,7 @@
         .news-content h3 {
             text-align: center;
         }
+
         #footer {
             background-color: #ccc;
             border-top: 1px solid;
@@ -45,7 +49,7 @@
 <div class="header" style="background-color: #0053b2; padding-bottom: 2%;padding-top: 2%;padding-left: 10%;">
     <div class="media">
         <div class="media-left">
-            <a href="#">
+            <a href="index.html">
                 <img class="media-object" src="./img/logo.png" alt="logo">
             </a>
         </div>
@@ -76,7 +80,6 @@
 </div>
 
 
-
 <footer id="footer">
     <div class="container">
         <p>企业培训|合作事宜|版权诉讼</p>
@@ -100,22 +103,6 @@
             return null;
         }
     })(jQuery);
-
-//    $(document).ready(function () {
-//        var news_id = $.getUrlParam('id');
-//        var url = "http://39.106.45.205:8003/detail";
-//        $.get(url, {"id": news_id},
-//            function (data) {
-//                var status = data.status;
-//                var data_detail = data.data;
-//                var title = $("<h3></h3>").text(data_detail.title);
-//                var content = $("<p></p>").text(data_detail.content).css("font-size", "18px");
-//                $('.news-content').append(title);
-//                $('.news-content').append(content);
-//
-//            }, "json");
-//    });
-
     $(document).ready(function () {
         var news_id = $.getUrlParam('id');
         var url = "http://39.106.45.205:8002/getlist/detail/";
@@ -127,41 +114,9 @@
             success: function (data) {
                 var status = data.status;
                 var title = $("<h3></h3>").text(data.title);
-                var content = $("<p></p>").text(data.content).css("font-size", "18px");
+                var content = $("<p></p>").html(data.content).css("font-size", "18px");
                 $('.news-content').append(title);
                 $('.news-content').append(content);
-//
-
-//                $.each(all, function (n, value) {
-//                    console.log(value);
-//                    var tr_news = $("<tr></tr>");
-//                    var td_category = $("<td></td>").css({
-//                        "border-top": "1px dash #ddd",
-//                        "border-left": "0",
-//                        "border-bottom": "0"
-//                    });
-//                    var td_title = $("<td></td>").css({
-//                        "border-top": "1px dash #ddd",
-//                        "border-left": "0",
-//                        "border-bottom": "0"
-//                    });
-//                    var td_timestamp = $("<td></td>").css({
-//                        "border-top": "1px dash #ddd",
-//                        "border-left": "0",
-//                        "border-bottom": "0"
-//                    });
-//                    var a_category = $("<span></span>").text(value.category).css("color", "black");
-//                    var a_title = $("<a href='news_detail.html?id=" + value.id + "'></a>").text(value.title).css("color", "black");
-//                    var a_time = $("<span</span>").text(value.timestamp).css("color", "black");
-//                    td_category.append(a_category);
-//                    td_title.append(a_title);
-//                    td_timestamp.append(a_time);
-//                    tr_news.append(td_category).append(td_title).append(td_timestamp);
-//                    $('.news-div .news-items').append(tr_news);
-//                });
-
-
-
             },
             error: function (error) {
                 console.log(JSON.stringify(error));
