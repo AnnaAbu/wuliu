@@ -1,0 +1,183 @@
+$side: left;
+.round {
+  border-#{$side}-radius: 5px;
+}
+
+$brand-primary: darken(#428bca, 6.5%) !default; // #337ab7
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: darken($btn-primary-bg, 5%) !default;
+
+.test {
+  color: $btn-primary-color;
+}
+
+$baseLineHeight: 2;
+$baseLineHeight: 1.5 !default;
+
+body {
+  line-height: $baseLineHeight;
+
+}
+
+.btn-primary {
+  background-color: $btn-primary-bg;
+  color: $btn-primary-color;
+  border: 1px solid $btn-primary-border;
+}
+
+$color: orange !default;
+.block {
+  color: $color; //调用全局变量
+}
+
+em {
+  $color: red; //定义局部变量
+  a {
+    color: $color; //调用局部变量
+  }
+}
+
+span {
+  color: $color; //调用全局变量
+}
+
+nav {
+  a {
+    color: red;
+    header & {
+      color: green;
+    }
+  }
+}
+
+.box {
+  border: {
+    top: 1px solid red;
+    bottom: 1px solid green;
+  }
+}
+
+$properties: (margin, padding);
+@mixin set-value($side, $value) {
+  @each $prop in $properties {
+    #{$prop}-#{$side}: $value;
+  }
+}
+
+.login-box {
+  @include set-value(top, 14px);
+}
+
+@mixin generate-sizes($class, $small, $medium, $big) {
+  .#{$class}-small {
+    font-size: $small;
+  }
+  .#{$class}-medium {
+    font-size: $medium;
+  }
+  .#{$class}-big {
+    font-size: $big;
+  }
+}
+
+@include generate-sizes("header-text", 12px, 20px, 40px);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box {
+  @include border-radius(3px);
+}
+
+%mt5 {
+  margin-top: 5px;
+}
+
+%pt5 {
+  padding-top: 5px;
+}
+
+.btn {
+  @extend %mt5;
+  @extend %pt5;
+}
+
+.block {
+  @extend %mt5;
+
+  span {
+    @extend %pt5;
+  }
+}
+
+//SCSS中混合宏使用
+@mixin mt($var) {
+  margin-top: $var;
+}
+
+.block {
+  @include mt(5px);
+
+  span {
+    display: block;
+    @include mt(5px);
+  }
+}
+
+.header {
+  color: orange;
+  @include mt(5px);
+
+  span {
+    display: block;
+    @include mt(5px);
+  }
+}
+
+//SCSS 继承的运用
+.mt {
+  margin-top: 5px;
+}
+
+.block {
+  @extend .mt;
+
+  span {
+    display: block;
+    @extend .mt;
+  }
+}
+.header {
+  color: orange;
+  @extend .mt;
+
+  span {
+    display: block;
+    @extend .mt;
+  }
+}
+//SCSS中占位符的使用
+%mt {
+  margin-top: 5px;
+}
+.block {
+  @extend %mt;
+
+  span {
+    display: block;
+    @extend %mt;
+  }
+}
+
+.header {
+  color: orange;
+  @extend %mt;
+
+  span {
+    display: block;
+    @extend %mt;
+  }
+}

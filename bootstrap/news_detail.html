@@ -15,7 +15,6 @@
 
         .info-left blockquote {
             margin: 0;
-
         }
 
         .info-left h2 {
@@ -103,17 +102,20 @@
         }
     })(jQuery);
     $(document).ready(function () {
-        var news_id = $.getUrlParam('id');
-        if (news_id==null){
-            return;
-        }
-        var url = "http://39.106.45.205:8002/getlist/detail/";
+//        var news_id = $.getUrlParam('id');
+//        if (news_id == null) {
+//            return;
+//        }
+        var url = "http://39.106.45.205:8004/app/index/";
         $.ajax({
             url: url,
             type: "POST",
             dataType: "json",
-            data: {"id": news_id},
+            data: {"id": '86', 'branch': 'lay_details'},
             success: function (data) {
+                console.log('==========');
+                console.log(JSON.stringify(data));
+                console.log('==========');
                 var status = data.status;
                 var title = $("<h3></h3>").text(data.title);
                 var content = $("<p></p>").html(data.content).css("font-size", "18px");
