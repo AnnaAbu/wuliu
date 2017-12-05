@@ -32,4 +32,26 @@
       max-lines: 1;
       vertical-align: center; }
 
+.detail-news-container .showing {
+  visibility: visible; }
+.detail-news-container div {
+  visibility: hidden;
+  background-color: green;
+  float: left; }
+.detail-news-container .detail-news ul {
+  margin: 0;
+  padding: 0; }
+  .detail-news-container .detail-news ul li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+    color: #fff; }
+    .detail-news-container .detail-news ul li a {
+      text-decoration: none;
+      color: #fff; }
+      .detail-news-container .detail-news ul li a:hover {
+        color: #aaa; }
+
 /*# sourceMappingURL=index.css.map */
